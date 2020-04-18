@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-transparent p-2">
+      <a class="navbar-brand lato-font" href="#">Metric:</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link lato-font temperature" id="btnKelvin" href="#">Kelvin  <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lato-font temperature" id="btnCelsius" href="#">Celsius</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link lato-font temperature" id="btnFahrenheit" href="#">Fahrenheit</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle lato-font" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span><img src="img/arrow-down.png" alt=""></span></a>
+          <div class="dropdown-menu" aria-labelledby="dropdown09">
+              <a class="dropdown-item" href="af">Afrikaans</a>
+              <a class="dropdown-item" href="al">Albanian</a>
+              <a class="dropdown-item" href="ar">Arabic</a>
+              <a class="dropdown-item" href="az">Azerbaijani</a>
+              <a class="dropdown-item" href="bg">Bulgarian</a>
+              <a class="dropdown-item" href="ca">Catalan</a>
+              <a class="dropdown-item" href="cz">Czech</a>
+              <a class="dropdown-item" href="da">Danish</a>
+              <a class="dropdown-item" href="de">German</a>
+              <a class="dropdown-item" href="el">Greek</a>
+              <a class="dropdown-item" href="en">English</a>
+              <a class="dropdown-item" href="eu">Basque</a>
+              <a class="dropdown-item" href="fa">Persian(Farsi)</a>
+              <a class="dropdown-item" href="fi">Finnish</a>
+              <a class="dropdown-item" href="fr">French</a>
+              <a class="dropdown-item" href="gl">Galician</a>
+              <a class="dropdown-item" href="he">Hebrew</a>
+              <a class="dropdown-item" href="hi">Hindi</a>
+              <a class="dropdown-item" href="hr">Croatian</a>
+              <a class="dropdown-item" href="hu">Hungarian</a>
+              <a class="dropdown-item" href="id">Indonesian</a>
+              <a class="dropdown-item" href="id">Italian</a>
+              <a class="dropdown-item" href="ja">Japanese</a>
+              <a class="dropdown-item" href="kr">Korean</a>
+              <a class="dropdown-item" href="la">Latvian</a>
+              <a class="dropdown-item" href="lt">Lithuanian</a>
+              <a class="dropdown-item" href="mk">Macedonian</a>
+              <a class="dropdown-item" href="no">Norwegian</a>
+              <a class="dropdown-item" href="nl">Dutch</a>
+              <a class="dropdown-item" href="pl">Polish</a>
+              <a class="dropdown-item" href="pt">Portuguese</a>
+              <a class="dropdown-item" href="pt_br">Português Brasil
+              </a>
+              <a class="dropdown-item" href="ro">Romanian</a>
+              <a class="dropdown-item" href="ru">Russian</a>
+              <a class="dropdown-item" href="sv,se">Swedish</a>
+              <a class="dropdown-item" href="sk">Slovak</a>
+              <a class="dropdown-item" href="sl">Slovenian</a>
+              <a class="dropdown-item" href="sr">Serbian</a>
+              <a class="dropdown-item" href="th">Thai</a>
+              <a class="dropdown-item" href="tr">Turkish</a>
+              <a class="dropdown-item" href="ua,uk">Ukrainian</a>
+              <a class="dropdown-item" href="vi">Vietnamese</a>
+              <a class="dropdown-item" href="zh_cn">Chinese Simplified</a>
+              <a class="dropdown-item" href="zh_tw">Chinese Traditional</a>
+              <a class="dropdown-item" href="zu">Zulu</a>
+
+              
+          </div>
+      </li>
+      </ul>
+      
+        
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid bg-transparent">
+      <div class="container text-center">
+        <h1 class="display-5 country" id="header-title">Open Weather Search For Current Data</h1>
+        <p class="lead country-city" id="header-subtitle">Search for current weather data</p>
+        
+        <div class="input-group mb-3 input-group-lg w-50 m-auto">
+          <input type="text" id="input" class="w-50 form-control input-text" placeholder="Enter Location,City,Country Or ZIP Code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="searchBtn" class="btn btn-primary btn-lg" type="button">Search</button>
+          </div>
+        </div>
+       
+       
+       
+       
+       
+       
+        <!-- <div class="form-group mt-5">
+         
+          <input type="text" class="m-auto w-50 d-inline-block input-lg form-control p-4" id="search-box" aria-describedby="emailHelp" placeholder="Enter Location,City,Country Or ZIP Code">
+          <span><button class="btn btn-primary btn-lg">Search</button></span>
+        </div> -->
+      </div>
+    </div>
+    </header>
+    <main id="result">
+        <div class="container text-center">   
+      <h1 class="weather-title mt-5 mb-5" id="weather-status">
+          TODAY WEATHER IN FEATURED CITIES
+      </h1>
+      <div class="row">
+          <div class="col-lg-3 col-sm-12">
+              <div class="card" style="width: 17rem;">
+                  <img src="img/01d.png" class="card-img-top weather-img mx-auto d-block" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title weather-info" id="weather-info">SUNNY</h2>
+                    <p class="card-text space" id="perception">Perception:0%</p>
+                    <p class="card-text space" id="humidity">Humidity:60%</p>
+                    <p class="card-text space" id="wind">Wind:8km/h</p>
+                    <h1 class="card-text temperature-result" id="temperature-result">28 C</h1>
+                    <h1 class="city" id="city">BELGRADE,RS</h1>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-12">
+              <div class="card" style="width: 17rem;">
+                  <img src="img/01d.png" class="card-img-top weather-img mx-auto d-block" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title weather-info" id="weather-info">SUNNY</h2>
+                    <p class="card-text space" id="perception">Perception:0%</p>
+                    <p class="card-text space" id="humidity">Humidity:60%</p>
+                    <p class="card-text space" id="wind">Wind:8km/h</p>
+                    <h1 class="card-text temperature-result" id="temperature-result">28 C</h1>
+                    <h1 class="city" id="city">BELGRADE,RS</h1>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-12">
+              <div class="card" style="width: 17rem;">
+                  <img src="img/01d.png" class="card-img-top weather-img mx-auto d-block" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title weather-info" id="weather-info">SUNNY</h2>
+                    <p class="card-text space" id="perception">Perception:0%</p>
+                    <p class="card-text space" id="humidity">Humidity:60%</p>
+                    <p class="card-text space" id="wind">Wind:8km/h</p>
+                    <h1 class="card-text temperature-result" id="temperature-result">28 C</h1>
+                    <h1 class="city" id="city">BELGRADE,RS</h1>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-12">
+              <div class="card" style="width: 17rem;">
+                  <img src="img/01d.png" class="card-img-top weather-img mx-auto d-block" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title weather-info" id="weather-info">SUNNY</h2>
+                    <p class="card-text space" id="perception">Perception:0%</p>
+                    <p class="card-text space" id="humidity">Humidity:60%</p>
+                    <p class="card-text space" id="wind">Wind:8km/h</p>
+                    <h1 class="card-text temperature-result" id="temperature-result">28 C</h1>
+                    <h1 class="city" id="city">BELGRADE,RS</h1>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div> 
+    </main>
+    <script src="src/scripts/state.js"></script>
+  
+    <script src="src/scripts/settings.js"></script>
+    <script src="src/scripts/services/weatherApiService.js"></script>
+    <script src="src/scripts/services/uiService.js"></script>
+    <script src="src/scripts/index.js"></script>
+</body>
+</html>

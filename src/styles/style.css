@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box !important;
+}
+
+body{
+    font-family:'Lato',sans-serif !important;
+}
+
+.lato-font {
+    color:#fff !important;
+    font-size:18px !important;
+    font-weight:300 !important;
+}
+
+.country {
+    font-size:60px;
+    font-weight: 900;
+    color:#fff;
+}
+
+.country-city{
+    font-size:24px;
+    font-weight: 300;
+    color:#fff;
+}
+header{
+    height:50vh;
+    background: url(../img/background-1440.png);
+}
+
+.temperature:hover {
+    
+    
+    border-bottom:3px solid white;
+}
+
+.space{
+    padding:0;
+    margin:0;
+    color:#4d4d4d;
+    font-weight: 300;
+    font-size:14px;
+}
+
+.weather-info,.temperature-result {
+    font-weight:900;
+    color:#0e8ea6;
+    font-size:14px;
+}
+.temperature-result{
+    font-size:42px
+}
+
+.city{
+    font-weight: 300;
+    color:#4d4d4d;
+}
+
+.weather-title{
+    color:#4d4d4d;
+    font-size:24px;
+    font-weight: 300;
+}
+
+.weather-img{
+    width:50%;
+}
+
+::placeholder {
+    
+    font-size:18px !important;
+    font-weight:300 !important;
+}
+
+.input-text {
+    font-size:14px;
+    font-weight:900;
+}
