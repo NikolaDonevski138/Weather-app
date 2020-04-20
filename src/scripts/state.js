@@ -4,11 +4,8 @@ const state = {
     // language: Languages.English
   }
 
-  const units = {
-      celsius:'metric',
-      fahrenheit :'imperial'
-  }
 
-//   const units = {
-//     unit:''
-//   }
+
+   const units = {
+     unit:''
+  }

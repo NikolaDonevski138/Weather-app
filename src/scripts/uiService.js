@@ -20,8 +20,8 @@ const uiElements = {
             alert('Please enter City')
         } else {
         state.searchInput = uiElements.searchInput.value
-        apiService.getWeather(state.searchInput)
-        apiService.getForecast(state.searchInput)
+        apiService.getWeather(state.searchInput,units.unit)
+        apiService.getForecast(state.searchInput,units.unit)
         }
       })
     //   ,
@@ -33,15 +33,15 @@ const uiElements = {
         units.unit = ''
     })
     uiElements.btnCelsius.addEventListener("click",e=>{
-      units.unit = ''
+      units.unit = 'metric'
     })
     uiElements.btnFahrenheit.addEventListener("click",e=>{
-      units.unit = ''
+      units.unit = 'imperial'
     })
     },
   
-    initialAction: (cities) => {
-      apiService.getFourCities(cities)
+    initialAction: (cities,unit) => {
+      apiService.getFourCities(cities,unit)
     },
     
 
@@ -61,7 +61,7 @@ const uiElements = {
               <p class="card-text space" id="perception">Perception:$0%</p>
               <p class="card-text space" id="humidity">Humidity:%${cityClean.humidity}%</p>
               <p class="card-text space" id="wind">Wind:${cityClean.wind}km/h</p>
-              <h1 class="card-text temperature-result" id="temperature-result">28 C</h1>
+              <h1 class="card-text temperature-result" id="temperature-result">${cityClean.temperature} C</h1>
               <h1 class="city" id="city">${cityClean.city},${cityClean.country}</h1>
             </div>
           </div>

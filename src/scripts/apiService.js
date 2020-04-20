@@ -2,10 +2,10 @@ url = `https://api.openweathermap.org/data/2.5`;
 key = '14175153236bfde9b467a65f18f207f1';
 
 const apiService = {
-   getFourCities:async(cities) => {
+   getFourCities:async(cities,unit) => {
        const citiesData = []
        for (const city of cities){
-           const res = await fetch(`${url}/weather?q=${city}&appid=${key}`)
+           const res = await fetch(`${url}/weather?q=${city}&units=${unit}&appid=${key}`)
            const data = await res.json()
            citiesData.push(data)
        }
@@ -15,8 +15,8 @@ const apiService = {
        uiService.renderFourCities(citiesInfo)
    },
 
-    getWeather:(city) =>{
-        fetch(`${url}/weather?q=${city}&appid=${key}`)
+    getWeather:(city,unit) =>{
+        fetch(`${url}/weather?q=${city}&units=${unit}&appid=${key}`)
         .then(res => res.json())
         .then(data => {
             console.log(data,'weather')
@@ -27,8 +27,8 @@ const apiService = {
            //UiService.render...
         })
     },
-    getForecast:(city) =>{
-        fetch(`${url}/forecast?q=${city}&units=metric&cnt=3&appid=${key}`)
+    getForecast:(city,unit) =>{
+        fetch(`${url}/forecast?q=${city}&units=${unit}&cnt=3&appid=${key}`)
         .then(res => res.json())
         .then(data => {
             let cityData = [];
