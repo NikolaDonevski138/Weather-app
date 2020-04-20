@@ -1,7 +1,11 @@
 const WeekDays = [
   "Monday",
   "Tuesday",
-  "Wednesay"
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
 ]
 
 const Pages = {

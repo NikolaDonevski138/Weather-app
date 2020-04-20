@@ -23,7 +23,8 @@ const apiService = {
           .then(forecastData => {
             const weatherInfo = dataService.mapWeatherData(weatherData)
             const forecastInfo = dataService.mapForecastData(forecastData)
-
+            console.log(weatherInfo,'weatherInfo')
+            console.log(forecastInfo,'forecastInfo')
             uiService.renderForecast(weatherInfo, forecastInfo)
           })
       })

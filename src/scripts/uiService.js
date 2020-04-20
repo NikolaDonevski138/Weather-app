@@ -92,6 +92,44 @@ const uiService = {
   },
 
   renderForecast: (weatherInfo, forecastInfo) => {
-    
+      let resultHtmlString = 
+      `<div class="container text-center">   
+          <h1 class="weather-title mt-5 mb-5" id="weather-status">
+              TODAY WEATHER IN FEATURED CITIES
+          </h1>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="d-block" src=./src/img/${weatherInfo.icon}.png">
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width:20rem;">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h1>${weatherInfo.temp} <span>C</span></h1>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                          <p>max<span>${weatherInfo.tempMax}</span></p>
+                        </div>
+                        <div class="col-sm-6 col-md-6>
+                          <p>min<span>${weatherInfo.tempMin}</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                   
+                </div>                  
+              </div>
+            </div>
+          </div>
+          `;
+
+      
+
+
+
+
+      uiElements.result.innerHTML = resultHtmlString
   }
 }
