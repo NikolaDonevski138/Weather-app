@@ -6,7 +6,7 @@ const dataService = {
       perception:'',
       humidity:cityData.main.humidity,
       wind:cityData.wind.speed,
-      temperature:cityData.main.temp,
+      temperature:Math.floor(cityData.main.temp),
       city:cityData.name,
       country:cityData.sys.country
     }})
@@ -16,9 +16,9 @@ const dataService = {
     return {
       name: weatherData.name,
       country: weatherData.sys.country,
-      temp: weatherData.main.temp,
-      tempMin: weatherData.main.temp_min,
-      tempMax: weatherData.main.temp_max,
+      temp: Math.floor(weatherData.main.temp),
+      tempMin: Math.floor(weatherData.main.temp_min),
+      tempMax: Math.floor(weatherData.main.temp_max),
       weather: weatherData.weather[0].main,
       weatherIcon: weatherData.weather[0].icon,
       perception: "",
@@ -29,8 +29,8 @@ const dataService = {
   
   mapForecastData: (forecastData) => {
     return forecastData.list.map(weather => { return {
-      tempMin: weather.main.temp_min,
-      tempMax: weather.main.temp_max,
+      tempMin: Math.floor(weather.main.temp_min),
+      tempMax: Math.floor(weather.main.temp_max),
       weatherDay: WeekDays[new Date(weather.dt_txt).getDay()],
       weatherIcon: weather.weather[0].icon
     }})

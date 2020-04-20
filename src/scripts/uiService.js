@@ -70,7 +70,7 @@ const uiService = {
     for (const cityClean of citiesClean) {
       resultHTMLString += `
           <div class="col-md-3">
-            <div class="card" style="width: 17rem;">
+            <div class="card border-0" style="width: 17rem;">
               <img src="./src/img/${cityClean.icon}.png" class="card-img-top weather-img mx-auto d-block" alt="...">
               <div class="card-body">
                 <h2 class="card-title weather-info" id="weather-info">${cityClean.weatherInfo}</h2>
@@ -92,39 +92,119 @@ const uiService = {
   },
 
   renderForecast: (weatherInfo, forecastInfo) => {
-      let resultHtmlString = 
-      `<div class="container text-center">   
-          <h1 class="weather-title mt-5 mb-5" id="weather-status">
-              TODAY WEATHER IN FEATURED CITIES
-          </h1>
+      let resultHtmlString = `
+      
+      <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="src/img/02d.png" class="currentDayImg">
+        </div>
+        <div class="col-md-4">
           <div class="row">
-            <div class="col-md-3">
-              <img class="d-block" src=./src/img/${weatherInfo.icon}.png">
-            </div>
             <div class="col-md-4">
-              <div class="card" style="width:20rem;">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h1>${weatherInfo.temp} <span>C</span></h1>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="col-sm-6 col-md-6">
-                          <p>max<span>${weatherInfo.tempMax}</span></p>
-                        </div>
-                        <div class="col-sm-6 col-md-6>
-                          <p>min<span>${weatherInfo.tempMin}</span></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>                   
-                </div>                  
+              <h1 class="lato-black-60 blue">${weatherInfo.temp}C</h1>
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6 pl-0">
+                  <p class="pl-3 pb-0 mb-0 lato-light-24 grey">max ${weatherInfo.tempMax}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 pl-3 lato-light-24 grey">
+                  <p class="">min ${weatherInfo.tempMin}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card bg-transparent border-0">
+                <div class="card-body pl-0">
+                  <h5 class="card-title mb-0 lato-light-24 blue">${weatherInfo.weather}</h5>
+                  <p class="card-text mb-0 lato-light-18 grey">Perception:0 %</p>
+                  <p class="card-text mb-0 lato-light-18 grey">Humidity:${weatherInfo.humidity} %</p>
+                  <p class="card-text mb-0 lato-light-18 grey">Wind:${weatherInfo.wind}km/h</p>
+                </div>
               </div>
             </div>
           </div>
-          `;
+          <div class="row">
+            <div class="col-sm-12 grey">
+              <p>View in 16 day weather forecast<p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" id="nextDaysInfo">
+          <div class="row pl-2">
+            <div class="col-md-3">
+              <img class="nextDayImg d-block" src="src/img/02d.png"/>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <p class="mb-0 lato-light-24 grey">${forecastInfo.weatherDay}</p>
+              </div>
+              <div class="row">
+                <div class="col-md-2 pl-0 lato-light-24 grey">
+                  <p>${forecastInfo.tempMax}</p>
+                </div>
+                <div class="col-md-10 pl-0">
+                  <p class="pb-0 mb-0 lato-light-24 grey">${forecastInfo.tempMin}</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="row pl-2">
+            <div class="col-md-3">
+              <img class="nextDayImg d-block" src="src/img/02d.png"/>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <p class="mb-0 lato-light-24 grey">Sunny</p>
+              </div>
+              <div class="row">
+                <div class="col-md-2 pl-0 lato-light-24 grey">
+                  <p>33</p>
+                </div>
+                <div class="col-md-10 pl-0">
+                  <p class="pb-0 mb-0 lato-light-24 grey">29</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row pl-2">
+            <div class="col-md-3">
+              <img class="nextDayImg d-block" src="src/img/02d.png"/>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <p class="mb-0 lato-light-24 grey">Sunny</p>
+              </div>
+              <div class="row">
+                <div class="col-md-2 pl-0 lato-light-24 grey">
+                  <p>33</p>
+                </div>
+                <div class="col-md-10 pl-0">
+                  <p class="pb-0 mb-0 lato-light-24 grey">29</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> 
+
+`
+
+     
+//Need to be improve with some for-loop for nextDays and units Sign for temperature
+//DataService Icon
       
 
 
