@@ -1,11 +1,8 @@
 const state = {
-    initalCities: ["Skopje", "Ohrid","Belgrade","Amsterdam"],
-    searchInput: null,
-    // language: Languages.English
-  }
+  page: Pages.Landing,
+  units: Units.Kelvin,
+  language: Languages.English,
+  searchInput: "",
 
-
-
-   const units = {
-     unit:''
-  }
+  initalCities: ["Skopje", "Ohrid","Belgrade","Amsterdam"],
+}
