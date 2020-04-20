@@ -19,15 +19,24 @@ const apiService = {
         fetch(`${url}/weather?q=${city}&appid=${key}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data,'weather')
+            let cityData = [];
+            cityData.push(data);
+           const cityInfo = dataService.mapCity(cityData);
+           console.log(cityInfo,'cityInfo') 
+           //UiService.render...
         })
     },
     getForecast:(city) =>{
-        fetch(`${url}/weather?q=${city}&appid=${key}`)
+        fetch(`${url}/forecast?q=${city}&units=metric&cnt=3&appid=${key}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-    })
+            let cityData = [];
+            cityData.push(data);
+            console.log(cityData);
+            const cityForecast = dataService.mapCityForecast(cityData)
+            console.log(cityForecast,'cityForecast')
+        }).catch(err => console.error(err))
 }
 }
 

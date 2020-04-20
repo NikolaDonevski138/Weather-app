@@ -20,7 +20,8 @@ const uiElements = {
             alert('Please enter City')
         } else {
         state.searchInput = uiElements.searchInput.value
-        apiService.getWeather(state.currentValue)
+        apiService.getWeather(state.searchInput)
+        apiService.getForecast(state.searchInput)
         }
       })
     //   ,
@@ -28,6 +29,15 @@ const uiElements = {
     //     state.language = uiElements.languageDropDown.selectedValue
     //     uiService.refresh()
     //   })
+    uiElements.btnKelvin.addEventListener("click",e=>{
+        units.unit = ''
+    })
+    uiElements.btnCelsius.addEventListener("click",e=>{
+      units.unit = ''
+    })
+    uiElements.btnFahrenheit.addEventListener("click",e=>{
+      units.unit = ''
+    })
     },
   
     initialAction: (cities) => {
@@ -43,7 +53,7 @@ const uiElements = {
         </h1><div class="row">`;
       for(const cityClean of citiesClean){
         uiElements.result.innerHTML += `
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-md-3">
         <div class="card" style="width: 17rem;">
             <img src="${cityClean.icon}" class="card-img-top weather-img mx-auto d-block" alt="...">
             <div class="card-body">
