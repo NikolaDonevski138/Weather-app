@@ -10,97 +10,125 @@
 <body>
     <header>
         <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light navbar-transparent p-2">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>  
-    <a class="navbar-brand lato-light-18 white" href="#">Metric:</a>
+          <nav class="navbar navbar-expand-lg navbar-light navbar-transparent p-2">
+            <button id="nav-toggle-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>  
+            <a class="navbar-brand lato-light-18 white" href="#">Metric:</a>
       
     
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link lato-light-18 temperature white" id="btnKelvin" href="#">Kelvin  <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link lato-light-18 temperature white" id="btnCelsius" href="#">Celsius</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link lato-light-18 temperature white" id="btnFahrenheit" href="#">Fahrenheit</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle lato-light-18 white" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span><img src="./src/img/arrow-down.png" alt=""></span></a>
-          <div class="dropdown-menu" aria-labelledby="dropdown09">
-              <a class="dropdown-item" href="af">Afrikaans</a>
-              <a class="dropdown-item" href="al">Albanian</a>
-              <a class="dropdown-item" href="ar">Arabic</a>
-              <a class="dropdown-item" href="az">Azerbaijani</a>
-              <a class="dropdown-item" href="bg">Bulgarian</a>
-              <a class="dropdown-item" href="ca">Catalan</a>
-              <a class="dropdown-item" href="cz">Czech</a>
-              <a class="dropdown-item" href="da">Danish</a>
-              <a class="dropdown-item" href="de">German</a>
-              <a class="dropdown-item" href="el">Greek</a>
-              <a class="dropdown-item" href="en">English</a>
-              <a class="dropdown-item" href="eu">Basque</a>
-              <a class="dropdown-item" href="fa">Persian(Farsi)</a>
-              <a class="dropdown-item" href="fi">Finnish</a>
-              <a class="dropdown-item" href="fr">French</a>
-              <a class="dropdown-item" href="gl">Galician</a>
-              <a class="dropdown-item" href="he">Hebrew</a>
-              <a class="dropdown-item" href="hi">Hindi</a>
-              <a class="dropdown-item" href="hr">Croatian</a>
-              <a class="dropdown-item" href="hu">Hungarian</a>
-              <a class="dropdown-item" href="id">Indonesian</a>
-              <a class="dropdown-item" href="id">Italian</a>
-              <a class="dropdown-item" href="ja">Japanese</a>
-              <a class="dropdown-item" href="kr">Korean</a>
-              <a class="dropdown-item" href="la">Latvian</a>
-              <a class="dropdown-item" href="lt">Lithuanian</a>
-              <a class="dropdown-item" href="mk">Macedonian</a>
-              <a class="dropdown-item" href="no">Norwegian</a>
-              <a class="dropdown-item" href="nl">Dutch</a>
-              <a class="dropdown-item" href="pl">Polish</a>
-              <a class="dropdown-item" href="pt">Portuguese</a>
-              <a class="dropdown-item" href="pt_br">Português Brasil</a>
-              <a class="dropdown-item" href="ro">Romanian</a>
-              <a class="dropdown-item" href="ru">Russian</a>
-              <a class="dropdown-item" href="sv,se">Swedish</a>
-              <a class="dropdown-item" href="sk">Slovak</a>
-              <a class="dropdown-item" href="sl">Slovenian</a>
-              <a class="dropdown-item" href="sr">Serbian</a>
-              <a class="dropdown-item" href="th">Thai</a>
-              <a class="dropdown-item" href="tr">Turkish</a>
-              <a class="dropdown-item" href="ua,uk">Ukrainian</a>
-              <a class="dropdown-item" href="vi">Vietnamese</a>
-              <a class="dropdown-item" href="zh_cn">Chinese Simplified</a>
-              <a class="dropdown-item" href="zh_tw">Chinese Traditional</a>
-              <a class="dropdown-item" href="zu">Zulu</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link lato-light-18 temperature white" id="btnKelvin" href="#">Kelvin  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link lato-light-18 temperature white" id="btnCelsius" href="#">Celsius</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link lato-light-18 temperature white" id="btnFahrenheit" href="#">Fahrenheit</a>
+                </li>
+              </ul>
 
-              
-          </div>
-      </li>
-      </ul>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-transparent dropdown-custom white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                English<span><img src="./src/img/arrow-down.png" alt=""></span>
+              </button>
+              <div class="dropdown-menu dropdown-scroll">
+                <a class="dropdown-item" href="#">Afrikaans</a>
+                <a class="dropdown-item" href="#">Albanian</a>
+                <a class="dropdown-item" href="#">Arabic</a>
+                <a class="dropdown-item" href="#">Azerbaijani</a>
+                <a class="dropdown-item" href="#">Bulgarian</a>
+                <a class="dropdown-item" href="#">Catalan</a>
+                <a class="dropdown-item" href="#">Czech</a>
+                <a class="dropdown-item" href="#">Danish</a>
+                <a class="dropdown-item" href="#">German</a>
+                <a class="dropdown-item" href="#">Hebrew</a>
+                <a class="dropdown-item" href="#">Hindi</a>
+                <a class="dropdown-item" href="#">Croatian</a>
+                <a class="dropdown-item" href="#">Hungarian</a>
+                <a class="dropdown-item" href="#">Indonesian</a>
+                <a class="dropdown-item" href="#">Italian</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <a class="dropdown-item" href="#">Korean</a>
+                <a class="dropdown-item" href="#">Latvian</a>
+                <a class="dropdown-item" href="#">Lithuanian</a>
+                <a class="dropdown-item" href="#">Greek</a>
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Basque</a>
+                <a class="dropdown-item" href="#">Persian(Farsi)</a>
+                <a class="dropdown-item" href="#">Finnish</a>
+                <a class="dropdown-item" href="#">French</a>
+                <a class="dropdown-item" href="#">Macedonian</a>
+                <a class="dropdown-item" href="#">Norwegian</a>
+                <a class="dropdown-item" href="#">Dutch</a>
+                <a class="dropdown-item" href="#">Polish</a>
+                <a class="dropdown-item" href="#">Portuguese</a>
+                <a class="dropdown-item" href="#">Português Brasil</a>
+                <a class="dropdown-item" href="#">Romanian</a>
+                <a class="dropdown-item" href="#">Russian</a>
+                <a class="dropdown-item" href="#">Swedish</a>
+                <a class="dropdown-item" href="#">Slovak</a>
+                <a class="dropdown-item" href="#">Slovenian</a>
+                <a class="dropdown-item" href="#">Serbian</a>
+                <a class="dropdown-item" href="#">Thai</a>
+                <a class="dropdown-item" href="#">Turkish</a>
+                <a class="dropdown-item" href="#">Ukrainian</a>
+                <a class="dropdown-item" href="#">Vietnamese</a>
+                <a class="dropdown-item" href="#">Chinese Simplified</a>
+                <a class="dropdown-item" href="#">Chinese Traditional</a>
+                <a class="dropdown-item" href="#">Zulu</a>
+
+              </div>
+            </div>
+       
       
-        
-      </div>
-    </nav>
-    <div class="jumbotron jumbotron-fluid bg-transparent">
-      <div class="container text-center">
-        <h1 class="display-5 lato-black-60 white" id="header-title">Open Weather Search For Current Data</h1>
-        <p class="lead lato-light-24 white" id="header-subtitle">Search for current weather data</p>
-        
-        <div class="input-group mb-3 input-group-lg w-50 m-auto">
-          <input type="text" id="input" class="w-50 form-control input-text" placeholder="Enter Location,City,Country Or ZIP Code" aria-label="Recipient's username" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button id="searchBtn" class="btn btn-primary btn-lg" type="button">Search</button>
+          </nav>
+        </div>
+    
+  
+    <div id="smallScreen">
+      <div class="container">
+        <div class="row">
+          <div class="jumbotron jumbotron-fluid bg-transparent w-75 mx-auto" id="smallScreen">
+            <div class="container text-center">
+              <h1 class="display-5 lato-black-60 white" id="header-title">Open Weather</h1>
+              <p class="lead lato-light-24 white" id="header-subtitle">SEARCH FOR CURRENT WEATHER DATA</p>
+            </div>
+            
+              <div class="row justify-content-center">                                  
+                    <input type="text" class="form-control input-lg mb-3 col-md-7 sm-12" id="input" aria-describedby="emailHelp" placeholder="Enter Location,City,Country Or ZIP Code">               
+                    <button type="button" class="btn btn-primary btn-lg col-md-2 sm-6 w-50" id="searchBtn">Search</button>                                    
+              </div>
+                     
           </div>
         </div>
-      </div>
+      </div>  
     </div>
 
+
+
+    <!-- <div id="smallScreen">
+      <div class="container">
+        <div class="row">
+          <div class="jumbotron jumbotron-fluid bg-transparent w-75 mx-auto" id="smallScreen">
+            <div class="container text-center">
+              <h1 class="display-5 lato-black-24 white" id="header-title">Open Weather</h1>
+              <p class="lead lato-light-18 white" id="header-subtitle">SEARCH FOR CURRENT WEATHER DATA</p>
+            </div>
+            <div class="col-md-6 d-inline-block">
+              <input type="text" class="form-control p-3 mb-3" id="input" aria-describedby="emailHelp" placeholder="Enter Location,City,Country Or ZIP Code">
+            </div>
+            <div class="text-center col-md-6">
+              <button type="button" class="btn btn-primary btn-md w-50 ">Search</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>  
+    </div> -->
 
 
     </header>
@@ -116,5 +144,8 @@
     <script src="src/scripts/apiService.js"></script>
     <script src="src/scripts/dataService.js"></script>
     <script src="src/scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

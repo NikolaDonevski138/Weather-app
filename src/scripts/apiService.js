@@ -21,10 +21,12 @@ const apiService = {
         fetch(`${url}/forecast?q=${city}&units=${units}&lang=${lang}&cnt=17&appid=${key}`)
           .then(forecastRes => forecastRes.json())
           .then(forecastData => {
+            console.log(forecastData,"unfiltered")
             const weatherInfo = dataService.mapWeatherData(weatherData)
             const forecastInfo = dataService.mapForecastData(forecastData)
             console.log(weatherInfo,'weatherInfo')
             console.log(forecastInfo,'forecastInfo')
+            console.log(forecastInfo[0].weatherDay,'forecastInfoWeatherDay')
             uiService.renderForecast(weatherInfo, forecastInfo)
           })
       })

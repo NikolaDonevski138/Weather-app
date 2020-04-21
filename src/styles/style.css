@@ -18,7 +18,7 @@ body{
 }
 /*lato-font (lato-light-18) */
 .lato-black-60 {
-    font-size:60px;
+    font-size:3.75rem !important;
     font-weight: 900;
     
 }
@@ -110,3 +110,29 @@ header{
 .grey{
     color:#4d4d4d;
 }
+
+
+    .dropdown-scroll{
+          height:200px !important;
+          overflow-y:auto !important;
+       }
+
+    .dropdown-custom {
+        outline:0 !important;
+        border: none;
+    }
+
+    .nav-toggle-button{
+        color:gray !important;
+    }
+
+@media (max-width:700px){
+    #header-title{
+        font-size:24px;
+        font-weight:300; 
+    }
+    #header-subtitle{
+        font-size:18px !important;
+        font-weight:300 !important;
+    }
+} 
