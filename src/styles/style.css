@@ -34,6 +34,10 @@ body{
     font-weight:900;
     
 }
+.lato-black-42{
+    font-size:42px;
+    font-weight:900;
+}
 
 header{
     height:50vh;
@@ -193,4 +197,22 @@ header{
       .disableNavBrand{
         display:none;
       }
+  }
+
+  @media(min-width:768px){
+      .right-corner {
+        border-top-right-radius:0;
+        border-bottom-right-radius: 0;
+      }
+      .left-corner {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+      }
+  }
+
+  @media screen and (max-width: 1090px) and (min-width: 845px) {
+    .lato-black-md{  
+        font-weight: 900!important;
+        font-size:20px!important;    
+    }
   }

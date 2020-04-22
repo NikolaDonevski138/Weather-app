@@ -105,12 +105,12 @@ const uiService = {
             <div class="card border-0" style="width: 100%;">
               <img src="./src/img/${cityClean.icon}.png" class="card-img-top weather-img m-auto d-block" alt="...">
               <div class="card-body">
-                <h2 class="card-title weather-info" id="weather-info">${cityClean.weatherInfo}</h2>
-                <p class="card-text space" id="perception">Perception:$0%</p>
-                <p class="card-text space" id="humidity">Humidity:%${cityClean.humidity}%</p>
-                <p class="card-text space" id="wind">Wind:${cityClean.wind}km/h</p>
-                <h1 class="card-text temperature-result" id="temperature-result">${cityClean.temperature} ${temperatureSign()}</h1>
-                <h1 class="city" id="city">${cityClean.city},${cityClean.country}</h1>
+                <h2 class="card-title lato-black-14 blue" id="weather-info">${cityClean.weatherInfo}</h2>
+                <p class="card-text space lato-light-14 grey" id="perception">Perception:$0%</p>
+                <p class="card-text space lato-light-14 grey" id="humidity">Humidity:%${cityClean.humidity}%</p>
+                <p class="card-text space lato-light-14 grey" id="wind">Wind:${cityClean.wind}km/h</p>
+                <h1 class="card-text lato-black-42 lato-black-md blue" id="temperature-result">${cityClean.temperature} ${temperatureSign()}</h1>
+                <h1 class="city lato-light-24 grey" id="city">${cityClean.city},${cityClean.country}</h1>
               </div>
             </div>
           </div>`
@@ -144,8 +144,8 @@ const uiService = {
     let resultHtmlString = `
       <div class="row mb-3">
       <div class="col-md-12 text-center">
-       <h1 class="weather-title mt-5 mb-5" id="weather-status">
-        CURRENT WEATHER TODAY,${forecastInfo[1].weatherDay},${new Date().getHours()}:${new Date().getMinutes()}
+       <h1 class="weather-title mt-5 mb-5 lato-light-24 grey" id="weather-status">
+        CURRENT WEATHER TODAY, ${forecastInfo[1].weatherDay}, ${new Date().getHours()}:${new Date().getMinutes()}
        </h1>
       </div> 
       </div>  
@@ -157,17 +157,17 @@ const uiService = {
         </div>
         <div class="col-md-4">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-7 sm-12">
               <h1 class="lato-black-60 blue">${weatherInfo.temp} ${temperatureSign()}</h1>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-5 sm-12">
               <div class="row">
-                <div class="col-md-6 pl-0">
+                <div class="col-md-12 pl-0">
                   <p class="pl-3 pb-0 mb-0 lato-light-24 grey">max ${weatherInfo.tempMax}${temperatureMiniSign()}</p>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 pl-3 lato-light-24 grey">
+                <div class="col-md-12 pl-3 lato-light-24 grey">
                   <p class="">min ${weatherInfo.tempMin}${temperatureMiniSign()}</p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ const uiService = {
           </div>
           
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-10">
               <div class="card bg-transparent border-0">
                 <div class="card-body pl-0">
                   <h5 class="card-title mb-0 lato-black-24 blue">${weatherInfo.weather}</h5>
@@ -195,10 +195,10 @@ const uiService = {
         </div>
         <div class="col-md-4" id="nextDaysInfo">
           <div class="row pl-2">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <img class="nextDayImg d-block" src="src/img/${forecastInfo[1].weatherIcon}.png"/>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <div class="row">
                 <p class="mb-0 lato-light-24 grey">${forecastInfo[1].weatherDay}</p>
               </div>
@@ -214,10 +214,10 @@ const uiService = {
           </div>
 
           <div class="row pl-2">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <img class="nextDayImg d-block" src="src/img/${forecastInfo[9].weatherIcon}.png"/>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <div class="row">
                 <p class="mb-0 lato-light-24 grey">${forecastInfo[9].weatherDay}</p>
               </div>
@@ -233,10 +233,10 @@ const uiService = {
           </div>
           
           <div class="row pl-2">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <img class="nextDayImg d-block" src="src/img/${forecastInfo[14].weatherIcon}.png"/>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <div class="row">
                 <p class="mb-0 lato-light-24 grey">${forecastInfo[14].weatherDay}</p>
               </div>
