@@ -4,6 +4,9 @@ const uiElements = {
   btnKelvin: document.getElementById('btnKelvin'),
   btnCelsius: document.getElementById('btnCelsius'),
   btnFahrenheit: document.getElementById('btnFahrenheit'),
+  btnSmKelvin: document.getElementById('btnSmKelvin'),
+  btnSmCelsius: document.getElementById('btnSmCelsius'),
+  btnSmFahrenheit: document.getElementById('btnSmFahrenheit'),
   cityTitle: document.getElementById('header-title'),
   countryTitle: document.getElementById('country-title'),
   searchInput: document.getElementById('input'),
@@ -39,6 +42,22 @@ const uiService = {
       state.units = Units.Fahrenheit
       uiService.refresh()
     })
+
+    uiElements.btnSmKelvin.addEventListener("click", e => {
+      state.units = Units.Kelvin
+      uiService.refresh()
+    })
+
+    uiElements.btnSmCelsius.addEventListener("click", e => {
+      state.units = Units.Celsius
+      uiService.refresh()
+    })
+
+    uiElements.btnSmFahrenheit.addEventListener("click", e => {
+      state.units = Units.Fahrenheit
+      uiService.refresh()
+    })
+    
    
   },
 
@@ -123,7 +142,14 @@ const uiService = {
       }
     }
     let resultHtmlString = `
-      
+      <div class="row mb-3">
+      <div class="col-md-12 text-center">
+       <h1 class="weather-title mt-5 mb-5" id="weather-status">
+        CURRENT WEATHER TODAY,${forecastInfo[1].weatherDay},${new Date().getHours()}:${new Date().getMinutes()}
+       </h1>
+      </div> 
+      </div>  
+
       <div class="container">
       <div class="row">
         <div class="col-md-4 text-center">

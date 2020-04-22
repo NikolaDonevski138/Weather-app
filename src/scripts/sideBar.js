@@ -1,8 +1,7 @@
-function openSlideMenu(){
-    document.getElementById('menu').style.width = '250px';
-    document.getElementById('content').style.marginLeft = '200px';
-}
-function openSlideMenu(){
-    document.getElementById('menu').style.width = '0';
-    document.getElementById('content').style.marginLeft = '0';
-}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
