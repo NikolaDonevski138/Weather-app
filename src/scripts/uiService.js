@@ -158,7 +158,7 @@ const uiService = {
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-7 sm-12">
-              <h1 class="lato-black-60 blue">${weatherInfo.temp} ${temperatureSign()}</h1>
+              <h1 class="lato-black-60 blue" id="lato-black-m">${weatherInfo.temp} ${temperatureSign()}</h1>
             </div>
             <div class="col-md-5 sm-12">
               <div class="row">
@@ -204,10 +204,10 @@ const uiService = {
               </div>
               <div class="row">
                 <div class="pl-0 lato-black-24 blue">
-                  <p>${forecastInfo[1].tempMax}${temperatureMiniSign()}</p>
+                  <p class="pl-0">${forecastInfo[1].tempMax}${temperatureMiniSign()}</p>
                 </div>
                 
-                  <p class="pb-0 mb-0 lato-light-24 grey">${forecastInfo[2].tempMin}${temperatureMiniSign()}</p>
+                  <p class="pb-0 mb-0 pl-0 lato-light-24 grey">${forecastInfo[2].tempMin}${temperatureMiniSign()}</p>
              
               </div>
             </div>

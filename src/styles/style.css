@@ -119,6 +119,7 @@ header{
     .dropdown-scroll{
           height:200px !important;
           overflow-y:auto !important;
+          
        }
 
     .dropdown-custom {
@@ -210,9 +211,30 @@ header{
       }
   }
 
-  @media screen and (max-width: 1090px) and (min-width: 845px) {
+  @media screen and (max-width: 1090px) and (min-width: 768px) {
     .lato-black-md{  
         font-weight: 900!important;
-        font-size:20px!important;    
+        font-size:25px!important;    
+    }
+}
+
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    #lato-black-m{
+        font-weight:900!important;
+        font-size:2rem!important;
+        
     }
   }
+/* 
+  .dropdown-scroll::-webkit-scrollbar-thumb {
+    width: 1em!important;
+  }
+
+  .dropdown-scroll::-webkit-scrollbar-button{
+      display:none;
+  }
+   
+  .dropdown-scroll::-webkit-scrollbar-thumb {
+    background-color: darkgrey !important;
+    outline: 1px solid slategrey !important;
+  }  */
