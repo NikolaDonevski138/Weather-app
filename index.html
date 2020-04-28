@@ -42,58 +42,62 @@
        
       
             </nav>
-            <div class="btn-group col-3">
-              <button type="button" class="btn btn-transparent dropdown-custom white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                English<span><img src="./src/img/arrow-down.png" alt=""></span>
-              </button>
-              <div class="dropdown-menu dropdown-scroll">
-                <a class="dropdown-item" href="#">Afrikaans</a>
-                <a class="dropdown-item" href="#">Albanian</a>
-                <a class="dropdown-item" href="#">Arabic</a>
-                <a class="dropdown-item" href="#">Azerbaijani</a>
-                <a class="dropdown-item" href="#">Bulgarian</a>
-                <a class="dropdown-item" href="#">Catalan</a>
-                <a class="dropdown-item" href="#">Czech</a>
-                <a class="dropdown-item" href="#">Danish</a>
-                <a class="dropdown-item" href="#">German</a>
-                <a class="dropdown-item" href="#">Hebrew</a>
-                <a class="dropdown-item" href="#">Hindi</a>
-                <a class="dropdown-item" href="#">Croatian</a>
-                <a class="dropdown-item" href="#">Hungarian</a>
-                <a class="dropdown-item" href="#">Indonesian</a>
-                <a class="dropdown-item" href="#">Italian</a>
-                <a class="dropdown-item" href="#">Japanese</a>
-                <a class="dropdown-item" href="#">Korean</a>
-                <a class="dropdown-item" href="#">Latvian</a>
-                <a class="dropdown-item" href="#">Lithuanian</a>
-                <a class="dropdown-item" href="#">Greek</a>
-                <a class="dropdown-item" href="#">English</a>
-                <a class="dropdown-item" href="#">Basque</a>
-                <a class="dropdown-item" href="#">Persian(Farsi)</a>
-                <a class="dropdown-item" href="#">Finnish</a>
-                <a class="dropdown-item" href="#">French</a>
-                <a class="dropdown-item" href="#">Macedonian</a>
-                <a class="dropdown-item" href="#">Norwegian</a>
-                <a class="dropdown-item" href="#">Dutch</a>
-                <a class="dropdown-item" href="#">Polish</a>
-                <a class="dropdown-item" href="#">Portuguese</a>
-                <a class="dropdown-item" href="#">Português Brasil</a>
-                <a class="dropdown-item" href="#">Romanian</a>
-                <a class="dropdown-item" href="#">Russian</a>
-                <a class="dropdown-item" href="#">Swedish</a>
-                <a class="dropdown-item" href="#">Slovak</a>
-                <a class="dropdown-item" href="#">Slovenian</a>
-                <a class="dropdown-item" href="#">Serbian</a>
-                <a class="dropdown-item" href="#">Thai</a>
-                <a class="dropdown-item" href="#">Turkish</a>
-                <a class="dropdown-item" href="#">Ukrainian</a>
-                <a class="dropdown-item" href="#">Vietnamese</a>
-                <a class="dropdown-item" href="#">Chinese Simplified</a>
-                <a class="dropdown-item" href="#">Chinese Traditional</a>
-                <a class="dropdown-item" href="#">Zulu</a>
-
-              </div>
-            </div>
+            <ul class="navbar-nav ml-auto" id="languages">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="english"> English</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="languagesListItem">
+                      <img src="img/arrow-up.png" id="arrowup">
+                      <a class="dropdown-item" href="#">Afrikaans</a>
+                      <a class="dropdown-item" href="#">Albanian</a>
+                      <a class="dropdown-item" href="#">Arabic</a>
+                      <a class="dropdown-item" href="#">Azerbaijani</a>
+                      <a class="dropdown-item" href="#">Bulgarian</a>
+                      <a class="dropdown-item" href="#">Catalan</a>
+                      <a class="dropdown-item" href="#">Czech</a>
+                      <a class="dropdown-item" href="#">Danish</a>
+                      <a class="dropdown-item" href="#">German</a>
+                      <a class="dropdown-item" href="#">Hebrew</a>
+                      <a class="dropdown-item" href="#">Hindi</a>
+                      <a class="dropdown-item" href="#">Croatian</a>
+                      <a class="dropdown-item" href="#">Hungarian</a>
+                      <a class="dropdown-item" href="#">Indonesian</a>
+                      <a class="dropdown-item" href="#">Italian</a>
+                      <a class="dropdown-item" href="#">Japanese</a>
+                      <a class="dropdown-item" href="#">Korean</a>
+                      <a class="dropdown-item" href="#">Latvian</a>
+                      <a class="dropdown-item" href="#">Lithuanian</a>
+                      <a class="dropdown-item" href="#">Greek</a>
+                      <a class="dropdown-item" href="#">English</a>
+                      <a class="dropdown-item" href="#">Basque</a>
+                      <a class="dropdown-item" href="#">Persian(Farsi)</a>
+                      <a class="dropdown-item" href="#">Finnish</a>
+                      <a class="dropdown-item" href="#">French</a>
+                      <a class="dropdown-item" href="#">Macedonian</a>
+                      <a class="dropdown-item" href="#">Norwegian</a>
+                      <a class="dropdown-item" href="#">Dutch</a>
+                      <a class="dropdown-item" href="#">Polish</a>
+                      <a class="dropdown-item" href="#">Portuguese</a>
+                      <a class="dropdown-item" href="#">Português Brasil</a>
+                      <a class="dropdown-item" href="#">Romanian</a>
+                      <a class="dropdown-item" href="#">Russian</a>
+                      <a class="dropdown-item" href="#">Swedish</a>
+                      <a class="dropdown-item" href="#">Slovak</a>
+                      <a class="dropdown-item" href="#">Slovenian</a>
+                      <a class="dropdown-item" href="#">Serbian</a>
+                      <a class="dropdown-item" href="#">Thai</a>
+                      <a class="dropdown-item" href="#">Turkish</a>
+                      <a class="dropdown-item" href="#">Ukrainian</a>
+                      <a class="dropdown-item" href="#">Vietnamese</a>
+                      <a class="dropdown-item" href="#">Chinese Simplified</a>
+                      <a class="dropdown-item" href="#">Chinese Traditional</a>
+                      <a class="dropdown-item" href="#">Zulu</a>
+      
+                      
+                  </ul>
+              </li>
+          </ul>
+           
             </div>
           </div>
       
@@ -109,6 +113,14 @@
             
               <div class="row justify-content-center">                                  
                   
+                
+                <!-- <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Type something...">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div> -->
+
                     <input type="text" class="form-control form-control-lg mb-3 col-md-7 sm-12 right-corner lato-light-18" id="input" aria-describedby="emailHelp" placeholder="Enter Location,City,Country Or ZIP Code">               
                     <button type="button" class="btn btn-primary btn-lg col-md-2 sm-6 w-50 h-50 left-corner lato-black-14" id="searchBtn">Search</button>                                    
                       

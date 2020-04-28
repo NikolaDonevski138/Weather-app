@@ -225,16 +225,54 @@ header{
         
     }
   }
-/* 
-  .dropdown-scroll::-webkit-scrollbar-thumb {
-    width: 1em!important;
+
+  ::-webkit-scrollbar-track {
+      background-color:white;
+      margin:40px 0;
   }
 
-  .dropdown-scroll::-webkit-scrollbar-button{
-      display:none;
-  }
-   
-  .dropdown-scroll::-webkit-scrollbar-thumb {
-    background-color: darkgrey !important;
-    outline: 1px solid slategrey !important;
-  }  */
+  ::-webkit-scrollbar {
+    width: 2px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    margin: 40px 10px;
+}
+
+
+::-webkit-scrollbar-corner {
+    color: transparent;
+}
+
+#arrowup {
+    float: right;
+}
+
+#languagesListItem {
+    position: absolute;
+    top: 0;
+    height: auto;
+    max-height: 270px;
+    overflow: auto;
+    text-align: left;
+    background: white;
+    border-right: 25px solid white;
+    
+}
+
+#languagesListItem a {
+    font-weight: 300;
+}
+#languagesListItem a:hover {
+    color: #0e8ea6;
+    background:white;
+    font-weight: 900;
+}
+#navbarDropdown {
+    color:white
+}
+
+.borderGrey {
+    border-right:1px solid #ccc;
+}

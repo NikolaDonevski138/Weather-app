@@ -155,28 +155,32 @@ const uiService = {
         <div class="col-md-4 text-center">
           <img src="src/img/${weatherInfo.weatherIcon}.png" class="currentDayImg">
         </div>
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-7 sm-12">
-              <h1 class="lato-black-60 blue" id="lato-black-m">${weatherInfo.temp} ${temperatureSign()}</h1>
-            </div>
-            <div class="col-md-5 sm-12">
-              <div class="row">
-                <div class="col-md-12 pl-0">
-                  <p class="pl-3 pb-0 mb-0 lato-light-24 grey">max ${weatherInfo.tempMax}${temperatureMiniSign()}</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 pl-3 lato-light-24 grey">
-                  <p class="">min ${weatherInfo.tempMin}${temperatureMiniSign()}</p>
-                </div>
-              </div>
-            </div>
-
+        <div class="col-md-4 text-center borderGrey">
+        
+       
+        <div class="row">
+         <div class="col-md-11 col-sm-10 col-xs-10 d-flex justify-content-between">    
+          <h1 class="lato-black-60 blue d-inline-block">${weatherInfo.temp} ${temperatureSign()}</h1>
+          <div class="row d-inline-block">
+         <div>
+          <div class="col pl-0 pr-0">
+          <p class="d-inline-block pl-0 p-0 mb-0 lato-light-24 grey">max ${weatherInfo.tempMax}${temperatureMiniSign()}</p>
+          </div>
+          <div class="col pl-0 pr-0">
+          <p class="d-inline-block pl-0 mb-0 lato-light-24 grey">min ${weatherInfo.tempMin}${temperatureMiniSign()}</p>
+          </div>
+         </div>
           </div>
           
+         </div>
+        
+        
+          
+    
+    </div>
+          
           <div class="row">
-            <div class="col-sm-10">
+            <div class="col-sm-10 text-left">
               <div class="card bg-transparent border-0">
                 <div class="card-body pl-0">
                   <h5 class="card-title mb-0 lato-black-24 blue">${weatherInfo.weather}</h5>
@@ -188,7 +192,7 @@ const uiService = {
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12 grey">
+            <div class="col-sm-12 grey text-left">
               <p>View in 16 day weather forecast<p>
             </div>
           </div>
